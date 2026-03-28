@@ -26,17 +26,17 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: ./telegram-rewards-app
+        working-directory: telegram-rewards-app
         run: npm install
 
       - name: Build project
-        working-directory: ./telegram-rewards-app
+        working-directory: telegram-rewards-app
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./telegram-rewards-app/dist
+          path: telegram-rewards-app/dist
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
